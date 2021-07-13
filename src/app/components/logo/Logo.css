@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Blankboard";
+    src: url("../../../Assets/Fonts/Blankboard.ttf");
+}
+
+.LogoText{
+    font-family: "Blankboard";
+}

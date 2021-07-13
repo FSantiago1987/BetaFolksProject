@@ -1,0 +1,17 @@
+
+
+.arrow {
+  pointer-events: none;
+}
+
+.arrow__path {
+  stroke: rgb(29, 160, 68);
+  fill: transparent;
+  stroke-dasharray: 6 6;
+}
+
+@media screen AND (max-width: 1350px) {
+  .arrow {
+    display: none;
+  }
+}
