@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import ImageLoader from "../imageLoader/ImageLoader";
 import {motion} from 'framer-motion';
+import styled from "styled-components";
+import { SCREENS } from "../responsive";
 
 
 const containerVarients = {
@@ -57,9 +59,13 @@ const itemMain = {
   }
 }
 
+const LoaderContainer = styled.div`
+
+`;
+
 const Loader = ({ setLoading }) => {
   return (
-    <div className='loader'>
+    <LoaderContainer className='loader'>
       <motion.div className='loader-inner'
         variants={containerVarients}
         initial="hidden"
@@ -82,7 +88,7 @@ const Loader = ({ setLoading }) => {
         <ImageBlock variants={itemVariantes} id='image-4' />
         <ImageBlock variants={itemVariantes} id='image-5' />
       </motion.div>
-    </div>
+    </LoaderContainer>
   );
 };
 
