@@ -107,7 +107,7 @@ const StepIcon = styled.span`
 
 function BookingSteps() {
   return (
-    <Container>
+    <Container id="howItWorks">
                     <SubTitle>How it Works</SubTitle>
       <Title>Our Working Steps</Title>
       <StepsContainer>

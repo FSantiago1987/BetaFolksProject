@@ -67,7 +67,7 @@ function GallerySection() {
   : Math.ceil(images.length - 2);
 
   return (
-    <GalleryContainer>
+    <GalleryContainer id="gallery">
       <Title>🐱 Happy Customers 🐶</Title>
         <Carousel
           value={current}

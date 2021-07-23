@@ -3,6 +3,7 @@ import styled, { css }  from "styled-components";
 import tw from "twin.macro";
 import { slide as Menu } from "react-burger-menu";
 import { useMediaQuery } from "react-responsive";
+import {Link} from 'react-scroll';
 import { SCREENS } from "../responsive";
 import menuStyles from "./menuStyles";
 
@@ -24,7 +25,7 @@ const NavItem = styled.li`
     `}
 `;
 
-const AnchorItem = styled.a<{menu?:any}>`
+const AnchorItem = styled(Link)<{menu?:any}>`
   ${tw`
         no-underline 
         text-black
@@ -54,16 +55,16 @@ function NavItems() {
       <Menu right styles={menuStyles}>
         <ListContainer>
           <NavItem>
-            <AnchorItem href="#" menu>Home</AnchorItem>
+            <AnchorItem smooth={true} to="home" offset={-110} aria-current="page" href="#" menu>Home</AnchorItem>
           </NavItem>
           <NavItem>
-            <AnchorItem href="#" menu>About</AnchorItem>
+            <AnchorItem smooth={true} to="about" offset={-110} href="#" menu>About</AnchorItem>
           </NavItem>
           <NavItem>
-            <AnchorItem href="#" menu>Services</AnchorItem>
+            <AnchorItem smooth={true} to="services" offset={-110} href="#" menu>Services</AnchorItem>
           </NavItem>
           <NavItem>
-            <AnchorItem href="#" menu>Contact Us</AnchorItem>
+            <AnchorItem smooth={true} to="contact" offset={-110} href="#" menu>Contact Us</AnchorItem>
           </NavItem>
         </ListContainer>
       </Menu>
@@ -72,16 +73,16 @@ function NavItems() {
   return (
     <ListContainer>
       <NavItem>
-        <AnchorItem href="#">Home</AnchorItem>
+        <AnchorItem smooth={true} to="home" offset={-110} aria-current="page" href="#">Home</AnchorItem>
       </NavItem>
       <NavItem>
-        <AnchorItem href="#">About</AnchorItem>
+        <AnchorItem  smooth={true} to="about" offset={-110} href="#">About</AnchorItem>
       </NavItem>
       <NavItem>
-        <AnchorItem href="#">Services</AnchorItem>
+        <AnchorItem  smooth={true} to="services" offset={-110} href="#">Services</AnchorItem>
       </NavItem>
       <NavItem>
-        <AnchorItem href="#">Contact Us</AnchorItem>
+        <AnchorItem  smooth={true} to="contact" offset={-110} href="#">Contact Us</AnchorItem>
       </NavItem>
     </ListContainer>
   );

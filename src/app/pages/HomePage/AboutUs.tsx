@@ -85,7 +85,7 @@ const InfoText = styled.p`
 
 function AboutUs() {
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
         <BlobAbout />
       <InfoContainer>
         <Title>About Me</Title>

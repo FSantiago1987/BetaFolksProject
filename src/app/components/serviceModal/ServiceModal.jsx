@@ -58,6 +58,14 @@ function ServiceModal({title, description, image}) {
             {" "}
             {description}
           </div>
+          <Button
+            className="button-bookar"
+            onClick={() => {
+              close();
+            }}
+          >
+            Resquest Now
+          </Button>
         </div>
       )}
     </Popup>

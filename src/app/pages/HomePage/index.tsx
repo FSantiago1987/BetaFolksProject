@@ -26,6 +26,11 @@ const PageContainer = styled.div`
         items-center
         overflow-x-hidden
     `}
+    @media (max-width: 1290px) {
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+  }
 `;
 
 function HomePage() {

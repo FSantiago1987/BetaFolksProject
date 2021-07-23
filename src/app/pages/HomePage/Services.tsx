@@ -99,7 +99,7 @@ function Services() {
     : Math.ceil(services.length / 3);
 
   return (
-    <Container>
+    <Container id="services">
       <Title>Explore Our Services</Title>
       <ServicesContainer>
         <Carousel

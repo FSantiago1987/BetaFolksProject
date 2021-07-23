@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
+import {Link} from 'react-scroll';
 import LogoFooter from "../../../Assets/Images/BetaFooter.png";
 import LogoFooterBW from "../../../Assets/Images/bw-beta.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Marginer } from "../marginer";
-import { faFacebook, faInstagram, faInstagramSquare, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagramSquare, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useMediaQuery } from "react-responsive";
 import { SCREENS } from "../responsive";
 import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
@@ -112,7 +113,7 @@ const HeaderTitle = styled.h3`
   `};
 `;
 
-const FooterLink = styled.a`
+const FooterLink = styled(Link)`
   text-decoration: none;
   transition: background-color, 200ms ease-in-out;
   ${tw`
@@ -213,7 +214,7 @@ const BWImgContainer = styled.div`
 function Footer() {
   const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
   return (
-    <FooterContainer>
+    <FooterContainer id="contact">
       {!isMobile && (
         <TopContainer>
           <LeftContainer>
@@ -222,13 +223,13 @@ function Footer() {
           <RightContainer>
             <SectionContainer>
               <HeaderTitle>Company</HeaderTitle>
-              <FooterLink>About</FooterLink>
+              <FooterLink smooth={true} to="about" offset={-110} className="nav-link" href="#">About</FooterLink>
             </SectionContainer>
             <SectionContainer>
               <HeaderTitle>Our Links</HeaderTitle>
-              <FooterLink>How it works</FooterLink>
-              <FooterLink>Our Services</FooterLink>
-              <FooterLink>Gallery</FooterLink>
+              <FooterLink smooth={true} to="howItWorks" offset={-110} className="nav-link" href="#">How it works</FooterLink>
+              <FooterLink smooth={true} to="services" offset={-110} className="nav-link" href="#">Our Services</FooterLink>
+              <FooterLink smooth={true} to="gallery" offset={-110} className="nav-link" href="#">Gallery</FooterLink>
             </SectionContainer>
             <SectionContainer>
                 <HeaderTitle>Call Now</HeaderTitle>

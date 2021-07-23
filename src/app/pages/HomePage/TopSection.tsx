@@ -285,6 +285,7 @@ function TopSection() {
   const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
   return (
     <TopSectionContainer
+      id="home"
       variants={TopVariants}
       initial={isMobile ? "" : "hidden"}
       animate={isMobile ? "" : "visible"}
