@@ -48,16 +48,15 @@ const itemMain = {
   },
   exit:{
     opacity: 0,
-    x: 200,
-    y:-70,
-    scale:0.9,
+    scale:1,
     transition: {
       ease: "easeInOut",
-      duration: 2.8,
-      delay:1.2
+      duration: 2.5,
+      delay:1
     }
   }
 }
+
 
 const LoaderContainer = styled.div`
 

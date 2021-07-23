@@ -107,7 +107,6 @@ function Services() {
           onChange={setCurrent}
           slides={services}
           plugins={[
-            "clickToChange",
             {
               resolve: slidesToShowPlugin,
               options: {

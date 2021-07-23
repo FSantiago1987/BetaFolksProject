@@ -2,10 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import { SCREENS } from '../responsive';
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface IButtonProps {
     theme?: "filled" | "outlined";
     text: string;
+    icon?:boolean;
 }
 
 const BaseButton = styled.div`
@@ -43,9 +46,23 @@ const OutlinedButton = styled(BaseButton)`
     `}
 `;
 
+const OutlinedIconButton = styled(BaseButton)`
+    ${tw`
+        flex
+        items-center
+        bg-blue-700
+        hover:bg-transparent
+        hover:text-blue-700
+        hover:border-blue-700
+    `}
+`;
+
+
 
 const FilledButton = styled(BaseButton)`
     ${tw`
+        flex
+        items-center
         border-pink-700
         text-pink-700
         bg-transparent
@@ -55,10 +72,23 @@ const FilledButton = styled(BaseButton)`
     `}
 `;
 
+const IconContainer = styled.div`
+    ${tw`
+        pl-2
+        text-base
+        md:text-lg
+    `}
+`;
+
 function Button(props: IButtonProps) {
 
-    const {theme, text} = props;
-    
+    const {theme, text, icon} = props;
+    if(icon && theme === "outlined"){
+        return <OutlinedIconButton>{ text } <IconContainer><FontAwesomeIcon icon={faFacebook} /></IconContainer></OutlinedIconButton>
+    }
+    else if(icon && theme === "filled"){
+        return <FilledButton>{ text } <IconContainer><FontAwesomeIcon icon={faInstagram} /></IconContainer></FilledButton>
+    }
     if(theme === "filled")
         return <FilledButton>{ text }</FilledButton>
     else

@@ -1,0 +1,43 @@
+.modal {
+    font-size: 12px;
+  }
+  .modal > .header {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    font-size: 40px;
+    text-align: center;
+    padding: 2px;
+    color: #047857
+
+  }
+  .modal > .content {
+    padding: 10px 5px;
+    text-align: justify;
+    margin: 5px 20px;
+  }
+
+  .modal > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+  }
+
+  .image-popupbox {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  

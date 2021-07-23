@@ -4,9 +4,11 @@ import tw from "twin.macro";
 import BlobImg from "../../../Assets/Images/blob.svg";
 import Beta from "../../../Assets/Images/Beta.png";
 import { SCREENS } from "../../components/responsive";
-import Button from "../../components/button/Button";
-import {motion} from 'framer-motion';
+import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
+import LogoInsta from "../../../Assets/Images/logoInsta.png";
+import LogoFace from "../../../Assets/Images/logoFace.png";
+import "./styles.css";
 
 const TopSectionContainer = styled(motion.div)`
   min-height: 450px;
@@ -24,7 +26,12 @@ const TopSectionContainer = styled(motion.div)`
     `}
   @media (max-width: ${SCREENS.sm}) {
     min-height: 150px;
-    margin-top:50px!important;
+    margin-top: 50px!important;
+  }
+  @media (min-height: 800px) {
+    min-height: 650px;
+    margin-top: 150px !important;
+    padding-left: 5px;
   }
 `;
 
@@ -52,6 +59,10 @@ const Slogan = styled.h1`
         lg:leading-normal
         xl:leading-relaxed
     `}
+  @media (min-height: 800px) {
+    font-size: 4rem;
+    margin-top: -50px;
+  }
 `;
 
 const RightContainer = styled(motion.div)`
@@ -74,7 +85,18 @@ const Description = styled.p`
             max-h-12
             text-gray-800
             text-left
+            leading-4
         `}
+  @media (min-height: 800px) {
+    font-size: 1.2rem;
+  }
+`;
+
+const CapitalizeDescription = styled.span`
+  ${tw`
+    uppercase
+    font-bold
+  `}
 `;
 
 const BlobContainer = styled(motion.div)`
@@ -89,6 +111,13 @@ const BlobContainer = styled(motion.div)`
     width: 100%;
     height: auto;
     max-height: max-content;
+  }
+  @media (min-height: 800px) {
+    width: 75rem !important;
+    max-height: 70rem !important;
+    right: -15rem !important;
+    top: -30rem !important;
+    transform: rotate(-20deg);
   }
   @media (min-width: ${SCREENS.sm}) {
     width: 45rem;
@@ -145,77 +174,143 @@ const StandaloneImage = styled.div`
     top: -9.5rem;
     transform: rotate(-2deg);
   }
+  @media (min-height: 800px) {
+    height: 40rem !important;
+    right: 6rem;
+    top: -11.5rem;
+    transform: rotate(-2deg);
+  }
 `;
 
-const ButtonsContainer = styled.div`
+const IconsContainer = styled.div`
   ${tw`
         flex
-        flex-wrap
-        mt-4
+        md:mt-2
+        items-center
     `}
 `;
 
-const TopVariants = {
-  hidden:{
-    opacity:0
-  },
-  visible:{
-    opacity:1,
-    transition:{
-      duration: 2,
-      delay:2
+const IconsText = styled.p`
+  ${tw`
+        text-xs
+        md:text-base
+        pr-2
+        md:pr-8
+    `}
+`;
+
+const Icons = styled.div`
+  ${tw`
+        flex
+        mt-4
+    `}
+  img {
+    width: auto;
+    height: 2rem;
+    @media (min-width: ${SCREENS.sm}) {
+      height: 4rem;
     }
   }
-}
+  a {
+    text-decoration: none;
+  }
+`;
 
-const TopMobileVariants = {
+const IconsF = styled.div`
+  ${tw`
+        flex
+        mt-4
+        md:pr-4
+        pr-2
+    `}
+  img {
+    width: auto;
+    height: 2rem;
+    @media (min-width: ${SCREENS.sm}) {
+      height: 4rem;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+`;
 
-}
+const TopVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 2,
+      delay: 2,
+    },
+  },
+};
 
 const LeftVariants = {
-  hidden:{
-    opacity:0,
-    x:-200
+  hidden: {
+    opacity: 0,
+    x: -200,
   },
-  visible:{
-    opacity:1,
-    x:0,
-    transition:{
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
       duration: 2,
-      delay:4
-    }
-  }
-}
+      delay: 4,
+    },
+  },
+};
 
 const RightVariants = {
-  hidden:{
-    opacity:0,
-    x:-100,
+  hidden: {
+    opacity: 0.3,
+    x: -300,
+    y: 200,
   },
-  visible:{
-    opacity:1,
-    x:0,
-    transition:{
-      duration: 2.5,
-      delay:2.5
-    }
-  }
-}
+  visible: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      ease: "easeInOut",
+      duration: 4,
+      delay: 0.8,
+    },
+  },
+};
 
 function TopSection() {
   const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
   return (
-      <TopSectionContainer variants={TopVariants} initial={isMobile ? "" : "hidden"} animate={isMobile ? "" : "visible"}>
+    <TopSectionContainer
+      variants={TopVariants}
+      initial={isMobile ? "" : "hidden"}
+      animate={isMobile ? "" : "visible"}
+    >
       <LeftContainer variants={LeftVariants}>
-        <Slogan>Dog Walking Service</Slogan>
+        <Slogan>We are the walking partner of your dog.</Slogan>
         <Description>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum
-          pellentesque lorem.
+          Are you looking to travel and need someone to take care of your pet?
+          Do you need to be away for longer than expected and need someone to
+          provide company for your pet? Would you like your pet to exercise or
+          socialize more?{" "}
+          <CapitalizeDescription>i can help you!</CapitalizeDescription>
         </Description>
-        <ButtonsContainer>
-          <Button text="Book a Dog Walker" />
-          <Button text="Puppy Training" theme="filled" />
-        </ButtonsContainer>
+        <IconsContainer className="icons">
+          <IconsText>Follow us on: </IconsText>
+          <IconsF className="icon-link">
+            <a href="https://www.instagram.com/betafolks/">
+              <img src={LogoFace} alt="" className="icon" />
+            </a>
+          </IconsF>
+          <Icons className="icon-link">
+            <a href="https://www.instagram.com/betafolks/">
+              <img src={LogoInsta} alt="" className="icon" />
+            </a>
+          </Icons>
+        </IconsContainer>
       </LeftContainer>
       <RightContainer variants={RightVariants}>
         <BlobContainer>

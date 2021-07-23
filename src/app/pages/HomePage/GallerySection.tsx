@@ -74,7 +74,6 @@ function GallerySection() {
           onChange={setCurrent}
           slides={images}
           plugins={[
-            "clickToChange",
             {
               resolve: slidesToShowPlugin,
               options: {
