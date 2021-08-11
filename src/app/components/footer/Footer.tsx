@@ -208,7 +208,7 @@ const BWImgContainer = styled.div`
         width: 100%;
         height: 100%;
     }
-`;   
+`;
 
 
 function Footer() {
@@ -246,7 +246,7 @@ function Footer() {
                 <RedIcon>
                   <FontAwesomeIcon icon={faEnvelope} />
                 </RedIcon>
-                <SmallText>hello@betafolks.com</SmallText>
+                <SmallText>betabrand@icloud.com</SmallText>
               </HorizontalContainer>
             </SectionContainer>
           </RightContainer>

@@ -90,16 +90,11 @@ function AboutUs() {
       <InfoContainer>
         <Title>About Me</Title>
         <InfoText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a
-          massa commodo sapien elementum dignissim. Pellentesque quis luctus
-          eros. Aenean in convallis diam. Quisque dignissim dignissim lobortis.
-          Quisque quis urna aliquet, aliquam arcu sit amet, vulputate risus. Sed
-          dui lectus, blandit in velit quis, placerat porttitor urna. Duis eu
-          imperdiet ligula. Nulla feugiat quam at pharetra consectetur. Aenean
-          rutrum libero ut lectus bibendum ultrices. dui lectus, blandit in velit quis, 
-          placerat porttitor urna. Duis eu
-          imperdiet ligula. Nulla feugiat quam at pharetra consectetur. Aenean
-          rutrum libero ut lectus bibendum ultrices.
+          Hi! I’m Roberta, and I’ve been working with animal care in Toronto
+          since the end of 2017. Since then, my clients and their dogs have
+          became my family. This webpage is dedicated to all of them and the
+          wonderful human and four legged friends we make daily.
+          Come and join our daily walks, stays and visits.
         </InfoText>
       </InfoContainer>
     </AboutContainer>
