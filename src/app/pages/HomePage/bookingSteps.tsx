@@ -119,8 +119,7 @@ function BookingSteps() {
           </Step>
           <StepTitle>Choose a Service</StepTitle>
           <StepDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a
-            massa commodo sapien elementum dignissim.
+            What does your pet need? I offer walks, daycare, visit and boarding services to take care of your best friend!
           </StepDescription>
         </StepContainer>
         <StepContainer>
@@ -131,8 +130,7 @@ function BookingSteps() {
           </Step>
           <StepTitle>Select Date and Time</StepTitle>
           <StepDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a
-            massa commodo sapien elementum dignissim.
+            When will your pet come and play with me? I Can't wait!
           </StepDescription>
         </StepContainer>
         <Arrow
@@ -157,8 +155,10 @@ function BookingSteps() {
           </Step>
           <StepTitle>Book the service</StepTitle>
           <StepDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a
-            massa commodo sapien elementum dignissim.
+            In order for your pet to have the best service,
+            the booking request goes through an assessment where the individual
+            needs of each animal are analyzed, including those of other pack members.
+            You will receive an answer shortly, don't worry!
           </StepDescription>
         </StepContainer>
         <Arrow

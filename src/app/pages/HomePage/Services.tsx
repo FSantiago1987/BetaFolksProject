@@ -24,7 +24,7 @@ const Container = styled.div`
         pl-4
         md:pl-0
         md:pr-0
-        mb-10        
+        mb-10
     `}
 `;
 
@@ -53,39 +53,40 @@ function Services() {
   const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
   const service1: IService = {
-    name: "Visits",
-    thumbnailSrc:"https://i.ibb.co/dLXymK0/visit.jpg",
+    name: "Walks",
+    thumbnailSrc:"https://i.ibb.co/tDtqXQ4/walk.jpg",
+
     hourlyPrice: 20,
     dailyPrice: 70,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus, urna nec tempor posuere.",
+      "Walking not only gets your pet exercising, it also teaches him to bond with other pets while reducing anxiety and frustration. At the end of the day, your pet will be more tired and happier!",
   };
 
   const service2: IService = {
-    name: "Walks",
-    thumbnailSrc:"https://i.ibb.co/tDtqXQ4/walk.jpg",
+    name: "Daycare",
+    thumbnailSrc:"https://i.ibb.co/jzLn21x/daycare.jpg",
     hourlyPrice: 20,
     dailyPrice: 50,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus, urna nec tempor posuere.",
+      "This is a great solution if you don't want to leave your pet alone for many hours, or even need time to concentrate without interruptions. What do you think?",
   };
 
   const service3: IService = {
-    name: "Daycare",
-    thumbnailSrc:"https://i.ibb.co/jzLn21x/daycare.jpg",
+    name: "Visits",
+    thumbnailSrc:"https://i.ibb.co/ZNMVKZV/visit.jpg",
     hourlyPrice: 30,
     dailyPrice: 100,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus, urna nec tempor posuere.",
+      "We know that some pets cannot leave their house. No worries! Our pack has members who only need a visit while enjoying their space.",
   };
 
   const service4: IService = {
     name: "Boarding Service",
-    thumbnailSrc:"https://i.ibb.co/HqM47Dv/boarding.jpg",
+    thumbnailSrc:"https://i.ibb.co/Bt45Yhj/boarding.jpg",
     hourlyPrice: 40,
     dailyPrice: 120,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus, urna nec tempor posuere.",
+      "Are you going to travel and need to know that your pet will be fine while you are gone? I will take care of your pet as it were mine! We will go out together and play with several friends every day.",
   };
 
   const services = [
